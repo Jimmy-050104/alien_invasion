@@ -119,12 +119,9 @@ def check_bullet_alien_collisions(ai_setting, aliens, bullets, screen, ship, sb,
                     bullets.remove(bullet)
                     break
         if len(aliens) == 0:
-            r = random.randint(0,2)
-            if r == 0:
-                ai_setting.bullet_power += 30
-                sb.prep_power()
-            elif r == 1:
-                ai_setting.bullet_speed_width += 30
+            r = random.randint(0, 2)
+            ship.apply_buff(r,sb)  # 让飞船显示 buff
+
             bullets.empty()
             create_fleet(ai_setting, screen, ship, aliens, sb)
             ai_setting.increase_speed()
