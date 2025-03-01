@@ -72,7 +72,7 @@ def fire_bullet(ai_setting, bullets, screen, ship, last_bullet_time, bullet_soun
     if current_time - last_bullet_time > ai_setting.bullet_cooldown:
         new_bullet = Bullet(ai_setting, screen, ship)
         bullets.add(new_bullet)
-        # bullet_sound.play()  # 播放子弹发射音效
+        bullet_sound.play()  # 播放子弹发射音效
         last_bullet_time = current_time
     return last_bullet_time
 
@@ -109,7 +109,7 @@ def check_bullet_alien_collisions(ai_setting, aliens, bullets, screen, ship, sb,
             for alien in collided_aliens:
                 alien.life -= bullet.power
                 if alien.life <= 0:
-                    # explosion_sound.play()
+                    explosion_sound.play()
                     aliens.remove(alien)
                     bullets.remove(bullet)
                     stats.score += ai_setting.alien_points
