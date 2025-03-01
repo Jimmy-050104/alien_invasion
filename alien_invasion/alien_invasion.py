@@ -15,8 +15,8 @@ def run_game():
     pygame.display.set_caption("alien_invasion")
 
 
-    # pygame.mixer.music.load('sounds/外星人入侵-Alien_Invasion_Underscor_爱给网_aigei_com.mp3')
-    # pygame.mixer.music.play(-1)
+    pygame.mixer.music.load('sounds/外星人入侵-Alien_Invasion_Underscor_爱给网_aigei_com.mp3')
+    pygame.mixer.music.play(-1)
 
     bullet_sound = pygame.mixer.Sound('sounds/外星人入侵游戏武器音效 (15)_爱给网_aigei_com.mp3')
     explosion_sound = pygame.mixer.Sound('sounds/勘探中火热爆-爆炸- 火球爆裂(Explo_Medium_F_爱给网_aigei_com.mp3')
